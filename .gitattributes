@@ -1,0 +1,18 @@
+# 仓库内统一用 LF 存储（Windows 上工作区仍是 CRLF，不影响编辑）
+* text=auto eol=lf
+
+# PowerShell 脚本按 LF 存储；Windows PowerShell 与 pwsh 都能正常执行
+*.ps1 text eol=lf
+
+# 二进制与内嵌素材：不做行尾转换
+*.png  binary
+*.jpg  binary
+*.wav  binary
+*.svg  text eol=lf
+
+# 语言与配置
+*.md   text eol=lf
+*.json text eol=lf
+*.yml  text eol=lf
+*.js   text eol=lf
+*.mjs  text eol=lf

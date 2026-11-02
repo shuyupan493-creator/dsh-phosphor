@@ -1,0 +1,48 @@
+{
+  "name": "@local/dsh-phosphor",
+  "version": "1.0.0-beta.2",
+  "description": "A black-and-phosphor-green hacker terminal theme for DSH: monospace type, neon active states, scanlines and vignette, CRT curvature, glitch jitter, typewriter entrance, a docked terminal status bar, and round-transition sound effects.",
+  "type": "module",
+  "icon": "./icon.svg",
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "theme",
+    "terminal",
+    "phosphor",
+    "crt",
+    "hacker"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./DEVELOPMENT.md": "./DEVELOPMENT.md"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "README.md",
+    "DEVELOPMENT.md",
+    "LICENSE",
+    "tools/"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  }
+}
